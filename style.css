@@ -1,0 +1,133 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: #222;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 50px;
+    background: #007bff;
+    color: white;
+}
+
+.btn {
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Products Slider */
+.product-slider {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.product-track {
+    display: flex;
+    animation: slide 10s infinite linear;
+}
+
+.product-card {
+    flex: 0 0 auto;
+    width: 200px;
+    margin: 10px;
+    background: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* Services */
+#services {
+    text-align: center;
+    padding: 50px;
+}
+
+.services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service {
+    background: #222;
+    color: white;
+    margin: 10px;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* Contact */
+#contact {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-slider {
+        width: 100%;
+    }
+    .product-card {
+        width: 150px;
+    }
+}
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .service {
+        width: 100%;
+    }
+}
